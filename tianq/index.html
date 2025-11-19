@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气查询 - tianqi_yym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 搜索区域 -->
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="city-input" 
+                    placeholder="输入城市名称（如：北京、Los Angeles）..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- 加载动画 -->
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>正在加载...</p>
+        </div>
+
+        <!-- 错误提示 -->
+        <div class="error-message" id="errorMessage" style="display: none;"></div>
+
+        <!-- 主要内容区域：天气卡片 + 穿搭卡片 -->
+        <div class="main-content">
+            <!-- 左侧：天气卡片 -->
+            <div class="weather-card">
+                <div class="weather-content" id="weatherContent">
+                    <div class="welcome-message">
+                        <h1>🌤️ 天气查询</h1>
+                        <p>输入城市名称，获取实时天气信息</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：穿搭推荐卡片 -->
+            <div class="outfit-card">
+                <div class="outfit-content" id="outfitContent">
+                    <div class="welcome-message">
+                        <h1>👔 穿搭推荐</h1>
+                        <p>根据天气自动推荐合适的穿搭</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
